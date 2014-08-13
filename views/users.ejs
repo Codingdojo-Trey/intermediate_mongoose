@@ -1,0 +1,12 @@
+<html>
+<head>
+	<title>Mongoose FTW!!</title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+	<h1>Here are all of the users!</h1>
+	<% for(var x in users) { %>
+		<h2>Name: <%= users[x].name %>, Email: <%= users[x].email %> </h2>
+	<% } %>
+</body>
+</html>

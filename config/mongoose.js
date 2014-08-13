@@ -24,7 +24,7 @@ mongoose.connection.on('disconnected', function () {
 // This is just a variable that holds the path to the models folder.  __Dirname is a default Express variable,
 // console.log it to see what it holds!
 var models_path = __dirname + '/../models';
-
+console.log(__dirname);
 // the forEach function should look familiar.  fs.readdirSync SYNChronously reads the files contained in the directory 
 // we want (the model's folder).  The benefit of the synchronicity is that we don't have to have a callback!
 fs.readdirSync(models_path).forEach(function (file) {

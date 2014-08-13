@@ -1,12 +1,17 @@
-<html>
+<html ng-app='willy_norman'>
 <head>
 	<title>Mongoose FTW!!</title>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+	<script type="text/javascript" src='/javascripts/angular_stuff.js'></script>
 </head>
-<body>
-	<h1>Here are all of the users!</h1>
-	<% for(var x in users) { %>
-		<h2>Name: <%= users[x].name %>, Email: <%= users[x].email %> </h2>
-	<% } %>
-</body>
+	<body ng-controller='julianController'>
+		<h1>Here are all of the users! {{ 4545754 * 35654 }}</h1>
+		<h2 ng-repeat="user in users">Name: {{user.name }}, Email: {{ user.email }} </h2>
+		<h2>Let's add something to the database!</h2>
+		<h3>Add a new user!</h3>
+		Name: <input type='text' ng-model='newUser.name'>
+		Email: <input type='text' ng-model='newUser.email'>
+		<input type='submit' value='add user!' ng-click='addUser()'>
+	</body>
 </html>
